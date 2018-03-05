@@ -1,13 +1,20 @@
-const w = 32, h = 18;
-const display = new ROT.Display({
-  width: w,
-  height: h,
-  forceSquareRatio: true
-});
-document.body.appendChild(display.getContainer());
 
-const maze = new ROT.Map.DividedMaze(w, h);
 
-maze.create((x, y, wall) => {
-  display.draw(x, y, wall ? "#" : ".");
-});
+
+var Game = {
+
+    options: {
+        width: 80,
+        height: 45,
+        fontSize: 12,
+        fontFamily: "Topaz-8",
+        forceSquareRatio: true  // TODO: Get square font and set true
+    },
+
+    init: function() {
+        this.display = new ROT.Display(this.options);
+        document.body.appendChild(this.display.getContainer());
+        this._generateMap();
+    }
+
+};

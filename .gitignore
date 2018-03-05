@@ -1,2 +1,6 @@
 .brackets.json
 js/.jshintrc
+
+### VisualStudioCode ###
+.vscode/*
+.history

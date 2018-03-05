@@ -16,8 +16,6 @@ var Game = {
         this.display = new ROT.Display(this.options);
         document.body.appendChild(this.display.getContainer());
         this._generateMap();
-        
-        tileset.load();
     }
 
 };
